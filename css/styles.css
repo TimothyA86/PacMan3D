@@ -1,0 +1,156 @@
+body
+{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+span
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#guiContainer
+{
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    font: bold 20px 'Arial';
+    color: white;
+    text-shadow:
+         3px  3px 0 #000,
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+#gameTitle
+{
+    height: auto;
+    min-width: 524px;
+    margin-top: 20px;
+    font-size: 80px;
+    text-align: center;
+    color: #FFE600;
+}
+
+#gameTitle.verticalHidable.active
+{
+    max-height: 100px;
+}
+
+#mainMenu
+{
+    width: 460px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainMenu.verticalHidable.active
+{
+    max-height: 600px;
+}
+
+#menuItem
+{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 450px;
+    min-width: 350px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 25px;
+}
+
+#menuItem.selected
+{
+    background: rgba(8, 156, 206, 0.5);
+    border: 1px solid #0C6685;
+}
+
+#menuItem.helpContent
+{
+    height: auto;
+    line-height: normal;
+    text-align: left;
+    font-size: 30px;
+    margin-left: 15%;
+    border-radius: 0px;
+}
+
+#menuItem.helpContent.verticalHidable.active
+{
+    max-height: 200px;
+}
+
+#simpleMessage
+{
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+#simpleMessage.countDown
+{
+    width: 110px;
+    font-size: 55px
+}
+
+#simpleMessage.score
+{
+    width: 500px;
+    text-align: right;
+    font-size: 30px;
+    top: 15px;
+    right: 15px;
+    padding-right: 5px;
+}
+
+#lives
+{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    background-repeat: repeat-x;
+    background-image: url("../textures/life.png");
+    right: 15px;
+    bottom:15px;
+}
+
+.verticalHidable
+{
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 600ms;
+}
+
+.horizontalHidable
+{
+    overflow: hidden;
+    max-width: 0px;
+    transition: max-width 600ms;
+}
+
+.font40
+{
+    font-size: 40px;
+}
+
+.colorRed
+{
+    color: #943B3B;
+}
